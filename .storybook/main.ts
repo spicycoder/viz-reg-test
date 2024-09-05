@@ -6,7 +6,10 @@ const config: StorybookConfig = {
     "@storybook/addon-onboarding",
     "@storybook/addon-links",
     "@storybook/addon-essentials",
-    "@storybook/addon-interactions"
+    "@storybook/addon-interactions",
+    "@storybook/addon-themes",
+    "@storybook/addon-a11y",
+    "storybook-dark-mode"
   ],
   framework: {
     name: "@storybook/angular",

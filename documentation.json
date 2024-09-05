@@ -9,7 +9,7 @@
     "components": [
         {
             "name": "AppComponent",
-            "id": "component-AppComponent-06494af5583a7fe72cc68421009697a00ca5e979226f12e0f6dbc7d9fcb2a91051b118eb4485b8409b6dd22329422cedfef7dc7303cd66e093ad9f1986d2df88",
+            "id": "component-AppComponent-e545ee58ffd5f2fc006caabca75051eceaf881d1be6ff1d03b1b3259dc6c3acbbf57fcfeb58d94d73088bb2577d2461f6d1953faa3d94f24fb81385ffd34af28",
             "file": "src/app/app.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -35,7 +35,7 @@
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 12
+                    "line": 14
                 }
             ],
             "methodsClass": [],
@@ -51,17 +51,25 @@
                 {
                     "name": "CardComponent",
                     "type": "component"
+                },
+                {
+                    "name": "StatsComponent",
+                    "type": "component"
+                },
+                {
+                    "name": "RangeComponent",
+                    "type": "component"
                 }
             ],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\r\nimport { RouterOutlet } from '@angular/router';\r\nimport { CardComponent } from \"./card/card.component\";\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  standalone: true,\r\n  imports: [RouterOutlet, CardComponent],\r\n  templateUrl: './app.component.html'\r\n})\r\nexport class AppComponent {\r\n  title = 'VisualRegressionTest';\r\n}\r\n",
+            "sourceCode": "import { Component } from '@angular/core';\r\nimport { RouterOutlet } from '@angular/router';\r\nimport { CardComponent } from \"./card/card.component\";\r\nimport { StatsComponent } from \"./stats/stats.component\";\r\nimport { RangeComponent } from './range/range.component';\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  standalone: true,\r\n  imports: [RouterOutlet, CardComponent, StatsComponent, RangeComponent],\r\n  templateUrl: './app.component.html'\r\n})\r\nexport class AppComponent {\r\n  title = 'VisualRegressionTest';\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
             "extends": [],
-            "templateData": "<app-card></app-card>\r\n"
+            "templateData": "<app-card></app-card>\r\n<app-stats></app-stats>\r\n<app-range></app-range>\r\n"
         },
         {
             "name": "CardComponent",
@@ -132,6 +140,128 @@
             "stylesData": "",
             "extends": [],
             "templateData": "<div class=\"card bg-neutral text-neutral-content w-96\">\r\n  <div class=\"card-body items-center text-center\">\r\n    <h2 class=\"card-title\">{{title}}</h2>\r\n    <p>{{content}}</p>\r\n    <div class=\"card-actions justify-end\">\r\n      <button *ngFor=\"let action of actions\" class=\"btn w-24\">{{action}}</button>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+        },
+        {
+            "name": "RangeComponent",
+            "id": "component-RangeComponent-a52e393d6008102f8e53985b3744fee56ee8b059a1ea024eb464e04689b060508c8865c386d19d96a0d32a81f112ec53225714e62db6601d06854eb3d6b3ffe7",
+            "file": "src/app/range/range.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-range",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./range.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "max",
+                    "defaultValue": "100",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "number",
+                    "decorators": []
+                },
+                {
+                    "name": "min",
+                    "defaultValue": "0",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
+                    "type": "number",
+                    "decorators": []
+                },
+                {
+                    "name": "value",
+                    "defaultValue": "40",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "number",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-range',\r\n  standalone: true,\r\n  imports: [CommonModule],\r\n  templateUrl: './range.component.html'\r\n})\r\nexport class RangeComponent {\r\n  @Input() min: number = 0;\r\n  @Input() max: number = 100;\r\n  @Input() value: number = 40;\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<input id=\"range-input\" type=\"range\" min={{min}} max={{max}} value={{value}} class=\"range\" />\r\n"
+        },
+        {
+            "name": "StatsComponent",
+            "id": "component-StatsComponent-ae128c630cd0da6c5cae12057301a43095ebd9b68c9374dc596bcd2a984234df07f20d7b55b7c901575d78d082ef204c7244a1e27f106c4f69cb255993cadb31",
+            "file": "src/app/stats/stats.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-stats",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./stats.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "statistics",
+                    "defaultValue": "[\r\n    {\r\n      title: 'Orders in 3 months',\r\n      value: '108'\r\n    },\r\n    {\r\n      title: 'Samples in 3 months',\r\n      value: '1,800'\r\n    },\r\n    {\r\n      title: 'Average Samples per Order',\r\n      value: '17'\r\n    }\r\n  ]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
+                    "type": "literal type[]",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-stats',\r\n  standalone: true,\r\n  imports: [CommonModule],\r\n  templateUrl: './stats.component.html'\r\n})\r\nexport class StatsComponent {\r\n  @Input() statistics: {title: string, value: string}[] = [\r\n    {\r\n      title: 'Orders in 3 months',\r\n      value: '108'\r\n    },\r\n    {\r\n      title: 'Samples in 3 months',\r\n      value: '1,800'\r\n    },\r\n    {\r\n      title: 'Average Samples per Order',\r\n      value: '17'\r\n    }\r\n  ];\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<div class=\"stats stats-vertical lg:stats-horizontal shadow\">\r\n  <div *ngFor=\"let stat of statistics\" class=\"stat\">\r\n    <div class=\"stat-title\">{{stat.title}}</div>\r\n    <div class=\"stat-value\">{{stat.value}}</div>\r\n  </div>\r\n</div>\r\n"
         }
     ],
     "modules": [],
@@ -200,6 +330,24 @@
                 "name": "CardComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/range/range.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "RangeComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/stats/stats.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "StatsComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
                 "status": "low"
             }
         ]
