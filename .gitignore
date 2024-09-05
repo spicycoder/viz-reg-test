@@ -46,3 +46,4 @@ Thumbs.db
 # Backstop report
 html_report/
 bitmaps_test/
+storybook-static/
