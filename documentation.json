@@ -9,7 +9,7 @@
     "components": [
         {
             "name": "AppComponent",
-            "id": "component-AppComponent-e545ee58ffd5f2fc006caabca75051eceaf881d1be6ff1d03b1b3259dc6c3acbbf57fcfeb58d94d73088bb2577d2461f6d1953faa3d94f24fb81385ffd34af28",
+            "id": "component-AppComponent-f61970b7b4aa580f6ce7220c09d62e0849754f0b3146216ad516093d8fe9282a2a83f1553ed1c3cf2e93e14fe279d27ac8b25b5255ddbe2d6c16fb1861e79791",
             "file": "src/app/app.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -35,7 +35,7 @@
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 14
+                    "line": 20
                 }
             ],
             "methodsClass": [],
@@ -59,17 +59,21 @@
                 {
                     "name": "RangeComponent",
                     "type": "component"
+                },
+                {
+                    "name": "FormComponent",
+                    "type": "component"
                 }
             ],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\r\nimport { RouterOutlet } from '@angular/router';\r\nimport { CardComponent } from \"./card/card.component\";\r\nimport { StatsComponent } from \"./stats/stats.component\";\r\nimport { RangeComponent } from './range/range.component';\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  standalone: true,\r\n  imports: [RouterOutlet, CardComponent, StatsComponent, RangeComponent],\r\n  templateUrl: './app.component.html'\r\n})\r\nexport class AppComponent {\r\n  title = 'VisualRegressionTest';\r\n}\r\n",
+            "sourceCode": "import { Component } from '@angular/core';\r\nimport { RouterOutlet } from '@angular/router';\r\nimport { CardComponent } from \"./card/card.component\";\r\nimport { StatsComponent } from \"./stats/stats.component\";\r\nimport { RangeComponent } from './range/range.component';\r\nimport { FormComponent } from './form/form.component';\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  standalone: true,\r\n  imports: [\r\n    RouterOutlet,\r\n    CardComponent,\r\n    StatsComponent,\r\n    RangeComponent,\r\n  FormComponent],\r\n  templateUrl: './app.component.html'\r\n})\r\nexport class AppComponent {\r\n  title = 'VisualRegressionTest';\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
             "extends": [],
-            "templateData": "<app-card></app-card>\r\n<app-stats></app-stats>\r\n<app-range></app-range>\r\n"
+            "templateData": "<div class=\"p-2\">\r\n  <app-card></app-card>\r\n  <app-stats></app-stats>\r\n  <app-range></app-range>\r\n  <app-form></app-form>\r\n</div>\r\n"
         },
         {
             "name": "CardComponent",
@@ -140,6 +144,104 @@
             "stylesData": "",
             "extends": [],
             "templateData": "<div class=\"card bg-neutral text-neutral-content w-96\">\r\n  <div class=\"card-body items-center text-center\">\r\n    <h2 class=\"card-title\">{{title}}</h2>\r\n    <p>{{content}}</p>\r\n    <div class=\"card-actions justify-end\">\r\n      <button *ngFor=\"let action of actions\" class=\"btn w-24\">{{action}}</button>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+        },
+        {
+            "name": "FormComponent",
+            "id": "component-FormComponent-a95a272e39daaa2fc6b87fdc07351f3a365ec273b679084dba8d3bf98a8268d8f092eb5d1b6e88508141aed51ae6045c6ce20ca1b91ae29dbb892a1e0de0f24e",
+            "file": "src/app/form/form.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-form",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./form.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "email",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 12
+                },
+                {
+                    "name": "password",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 14
+                },
+                {
+                    "name": "userInputs",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 16
+                },
+                {
+                    "name": "username",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 13
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "computeInput",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 18,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "FormsModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component } from '@angular/core';\r\nimport { FormsModule } from '@angular/forms';\r\n\r\n@Component({\r\n  selector: 'app-form',\r\n  standalone: true,\r\n  imports: [CommonModule, FormsModule],\r\n  templateUrl: './form.component.html'\r\n})\r\nexport class FormComponent {\r\n  email: string = '';\r\n  username: string = '';\r\n  password: string = '';\r\n\r\n  userInputs: string = '';\r\n\r\n  computeInput() {\r\n    this.userInputs = `${this.email} ${this.username}`;\r\n    console.log(this.email);\r\n    console.log(this.username);\r\n    console.log(this.userInputs);\r\n  }\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<div class=\"flex\">\r\n  <div class=\"space-y-2\">\r\n    <label class=\"input input-bordered flex items-center gap-2\">\r\n      <svg\r\n        xmlns=\"http://www.w3.org/2000/svg\"\r\n        viewBox=\"0 0 16 16\"\r\n        fill=\"currentColor\"\r\n        class=\"h-4 w-4 opacity-70\">\r\n        <path\r\n          d=\"M2.5 3A1.5 1.5 0 0 0 1 4.5v.793c.026.009.051.02.076.032L7.674 8.51c.206.1.446.1.652 0l6.598-3.185A.755.755 0 0 1 15 5.293V4.5A1.5 1.5 0 0 0 13.5 3h-11Z\" />\r\n        <path\r\n          d=\"M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z\" />\r\n      </svg>\r\n      <input id=\"email\" type=\"text\" class=\"grow\" placeholder=\"Email\" [(ngModel)]=\"email\" />\r\n    </label>\r\n    <label class=\"input input-bordered flex items-center gap-2\">\r\n      <svg\r\n        xmlns=\"http://www.w3.org/2000/svg\"\r\n        viewBox=\"0 0 16 16\"\r\n        fill=\"currentColor\"\r\n        class=\"h-4 w-4 opacity-70\">\r\n        <path\r\n          d=\"M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12.735 14c.618 0 1.093-.561.872-1.139a6.002 6.002 0 0 0-11.215 0c-.22.578.254 1.139.872 1.139h9.47Z\" />\r\n      </svg>\r\n      <input id=\"username\" type=\"text\" class=\"grow\" placeholder=\"Username\" [(ngModel)]=\"username\" />\r\n    </label>\r\n    <label class=\"input input-bordered flex items-center gap-2\">\r\n      <svg\r\n        xmlns=\"http://www.w3.org/2000/svg\"\r\n        viewBox=\"0 0 16 16\"\r\n        fill=\"currentColor\"\r\n        class=\"h-4 w-4 opacity-70\">\r\n        <path\r\n          fill-rule=\"evenodd\"\r\n          d=\"M14 6a4 4 0 0 1-4.899 3.899l-1.955 1.955a.5.5 0 0 1-.353.146H5v1.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2.293a.5.5 0 0 1 .146-.353l3.955-3.955A4 4 0 1 1 14 6Zm-4-2a.75.75 0 0 0 0 1.5.5.5 0 0 1 .5.5.75.75 0 0 0 1.5 0 2 2 0 0 0-2-2Z\"\r\n          clip-rule=\"evenodd\" />\r\n      </svg>\r\n      <input id=\"password\" type=\"password\" class=\"grow\" [(ngModel)]=\"password\" />\r\n    </label>\r\n    <button (click)=\"computeInput()\" class=\"btn btn-primary\">Submit</button>\r\n    <p>{{userInputs}}</p>\r\n  </div>\r\n</div>\r\n"
         },
         {
             "name": "RangeComponent",
@@ -330,6 +432,15 @@
                 "name": "CardComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/form/form.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "FormComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/6",
                 "status": "low"
             },
             {
