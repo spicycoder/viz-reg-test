@@ -2,16 +2,6 @@
   "id": "backstop_default",
   "viewports": [
     {
-      "label": "phone",
-      "width": 320,
-      "height": 480
-    },
-    {
-      "label": "tablet",
-      "width": 1024,
-      "height": 768
-    },
-    {
       "label": "desktop",
       "width": 1920,
       "height": 1080
@@ -22,11 +12,42 @@
   "scenarios": [
     {
       "label": "Cookies Card",
-      "url": "http://localhost:6006/iframe.html?globals=backgrounds.value:!hex(333333);backgrounds.grid:!false&args=&id=example-card--cookies",
-      "readySelector": ".card",
-      "delay": 200,
+      "url": "http://localhost:6006/iframe.html?args=&id=example-card--cookies",
+      "readySelector": "app-card",
       "selectors": [
-        "storybook-root app-card .card"
+        "#storybook-root storybook-root app-card .card"
+      ]
+    },
+    {
+      "label": "Default Form",
+      "url": "http://localhost:6006/iframe.html?args=&id=example-form--default",
+      "readySelector": "app-form",
+      "selectors": [
+        "#storybook-root storybook-root app-form .space-y-2"
+      ]
+    },
+    {
+      "label": "Filled Form",
+      "url": "http://localhost:6006/iframe.html?id=example-form--filled-form",
+      "readySelector": "app-form",
+      "selectors": [
+        "#storybook-root storybook-root app-form .space-y-2"
+      ]
+    },
+    {
+      "label": "Default Range",
+      "url": "http://localhost:6006/iframe.html?args=&id=example-range--default",
+      "readySelector": "app-range",
+      "selectors": [
+        "#storybook-root storybook-root app-range input[type=range]"
+      ]
+    },
+    {
+      "label": "Accounts Stats",
+      "url": "http://localhost:6006/iframe.html?args=&id=example-stats--accounts",
+      "readySelector": "app-stats",
+      "selectors": [
+        "#storybook-root storybook-root app-stats .stats"
       ]
     }
   ],

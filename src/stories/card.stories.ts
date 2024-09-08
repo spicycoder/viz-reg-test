@@ -10,6 +10,9 @@ const meta: Meta<CardComponent> = {
 export default meta;
 type Story = StoryObj<CardComponent>;
 
+export const Default: Story = {
+};
+
 export const Cookies: Story = {
   args: {
     title: 'Cookies',

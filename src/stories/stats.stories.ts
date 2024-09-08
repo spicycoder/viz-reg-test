@@ -10,6 +10,9 @@ const meta: Meta<StatsComponent> = {
 export default meta;
 type Story = StoryObj<StatsComponent>;
 
+export const Default: Story = {
+};
+
 export const Accounts: Story = {
   args: {
     statistics: [

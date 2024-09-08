@@ -10,6 +10,9 @@ const meta: Meta<RangeComponent> = {
 export default meta;
 type Story = StoryObj<RangeComponent>;
 
+export const Default: Story = {
+};
+
 export const Zero: Story = {
   args: {
     min: 0,
