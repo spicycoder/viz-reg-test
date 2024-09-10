@@ -1,8 +1,8 @@
-<div class="card bg-neutral text-neutral-content w-96">
+<div class="card bg-base-100 w-96 shadow-xl">
   <div class="card-body items-center text-center">
     <h2 class="card-title">{{title}}</h2>
     <p>{{content}}</p>
-    <div class="card-actions justify-end">
+    <div class="card-actions">
       <button *ngFor="let action of actions" class="btn w-24">{{action}}</button>
     </div>
   </div>

@@ -14,6 +14,7 @@
       "label": "Cookies Card",
       "url": "http://localhost:6006/iframe.html?args=&id=example-card--cookies",
       "readySelector": "app-card",
+      "delay": 200,
       "selectors": [
         "#storybook-root storybook-root app-card .card"
       ]
@@ -22,6 +23,7 @@
       "label": "Default Form",
       "url": "http://localhost:6006/iframe.html?args=&id=example-form--default",
       "readySelector": "app-form",
+      "delay": 200,
       "selectors": [
         "#storybook-root storybook-root app-form .space-y-2"
       ]
@@ -30,6 +32,7 @@
       "label": "Filled Form",
       "url": "http://localhost:6006/iframe.html?id=example-form--filled-form",
       "readySelector": "app-form",
+      "delay": 500,
       "selectors": [
         "#storybook-root storybook-root app-form .space-y-2"
       ]
@@ -38,6 +41,7 @@
       "label": "Default Range",
       "url": "http://localhost:6006/iframe.html?args=&id=example-range--default",
       "readySelector": "app-range",
+      "delay": 200,
       "selectors": [
         "#storybook-root storybook-root app-range input[type=range]"
       ]
@@ -46,6 +50,7 @@
       "label": "Accounts Stats",
       "url": "http://localhost:6006/iframe.html?args=&id=example-stats--accounts",
       "readySelector": "app-stats",
+      "delay": 200,
       "selectors": [
         "#storybook-root storybook-root app-stats .stats"
       ]
