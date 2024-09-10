@@ -9,8 +9,7 @@ const config: StorybookConfig = {
     "@storybook/addon-interactions",
     "@storybook/addon-themes",
     "@storybook/addon-a11y",
-    "storybook-dark-mode",
-    "@storybook/addon-interactions"
+    "storybook-dark-mode"
   ],
   framework: {
     name: "@storybook/angular",
